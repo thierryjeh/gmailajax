@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+gem 'table_print'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use postgresql as the database for Active Record
@@ -38,7 +40,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 #lazy user creation
 gem 'devise'
-gem 'faker'
+gem 'faker', :git => 'https://github.com/ZeddBox/faker_fr.git', :branch => 'master'
 #Front end gem
 gem "font-awesome-rails"
 gem 'bootstrap', '~> 4.3.1'
