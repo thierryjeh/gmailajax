@@ -2,6 +2,7 @@
   <p class = "text-center"><b>Object : </b><%= email.object %></p>
   <hr>
   <p><%= email.body %></p>
+  <br><br>
   <div class="mt-7 text-center">
   <%= link_to "Delete", email_path(email.id), class:"btn btn-outline-dark", data:{method: "DELETE"}, remote: true %>
   <% if email.read %>
