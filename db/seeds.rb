@@ -24,5 +24,5 @@ Email.destroy_all
 end
 
 25.times do 
-  Email.create(object: Faker::TvShows::TwinPeaks.character, body: Faker::TvShows::TwinPeaks.quote, read: false)
+  Email.create(object: Faker::Artist.name, body: Faker::TvShows::TwinPeaks.quote, read: false)
 end
