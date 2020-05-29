@@ -3915,3 +3915,3076 @@ Completed 200 OK in 29ms (Views: 16.4ms | ActiveRecord: 2.6ms)
   [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
   [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails"[0m
+Started GET "/" for 127.0.0.1 at 2020-05-29 03:18:41 +0200
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by EmailController#index as HTML
+Completed 401 Unauthorized in 60ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-29 03:18:42 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (7.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (45.1ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_flash.html.erb (2.3ms)
+Completed 200 OK in 13835ms (Views: 13790.0ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-29 03:19:06 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RlLjYUeRkD1ynhTcbg0J4R5+D/yWEqMSBXe7Y7RIW6CqZGNzh8FecxT2GKGaX5ts06egLH0gtd26XFnwDkKacg==", "user"=>{"email"=>"yop@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "yop@yopmail.com"], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 14ms (ActiveRecord: 1.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RlLjYUeRkD1ynhTcbg0J4R5+D/yWEqMSBXe7Y7RIW6CqZGNzh8FecxT2GKGaX5ts06egLH0gtd26XFnwDkKacg==", "user"=>{"email"=>"yop@yopmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.4ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_flash.html.erb (1.2ms)
+Completed 200 OK in 342ms (Views: 150.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2020-05-29 03:19:09 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+DEPRECATION WARNING: [Devise] `DeviseHelper.devise_error_messages!`
+is deprecated and it will be removed in the next major version.
+To customize the errors styles please run `rails g devise:views` and modify the
+`devise/shared/error_messages` partial.
+ (called from block in _app_views_devise_registrations_new_html_erb___2786649791778165251_70325674459380 at /home/thiierryjeh/Bureau/Js/Ajax/gmailAjax/app/views/devise/registrations/new.html.erb:4)
+  Rendered devise/shared/_links.html.erb (2.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navbar.html.erb (2.8ms)
+  Rendered layouts/_flash.html.erb (1.8ms)
+Completed 200 OK in 119ms (Views: 115.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2020-05-29 03:19:18 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VvP4Kk3zjW4AvFa4S/HbCKDI9zMKyt0jd6K0JEzHl4o1ik+AX240Fl80iPLkxJchjJ7D+K6d44dt0ztcJMzhAQ==", "user"=>{"email"=>"yop@yopmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "yop@yopmail.com"], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "yop@yopmail.com"], ["encrypted_password", "$2a$11$CBIOIBk73PWwplBK.rqEdOznspcCJXrc0TE2KGYSUwDHIV07cO9eu"], ["created_at", "2020-05-29 01:19:18.578686"], ["updated_at", "2020-05-29 01:19:18.578686"]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (8.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 251ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 03:19:18 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (2.4ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (1.1ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (1.1ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (3.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/index.html.erb within layouts/application (136.8ms)
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_flash.html.erb (1.8ms)
+Completed 200 OK in 354ms (Views: 228.7ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 03:19:29 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (13.8ms)
+Completed 200 OK in 36ms (Views: 23.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/email/55" for 127.0.0.1 at 2020-05-29 03:19:31 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (5.7ms)
+Completed 200 OK in 33ms (Views: 20.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/email/56" for 127.0.0.1 at 2020-05-29 03:19:32 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.9ms)
+  Rendered email/show.js.erb (10.6ms)
+Completed 200 OK in 27ms (Views: 20.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/email/57" for 127.0.0.1 at 2020-05-29 03:19:33 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.5ms)
+  Rendered email/show.js.erb (8.3ms)
+Completed 200 OK in 35ms (Views: 27.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/email/58" for 127.0.0.1 at 2020-05-29 03:19:35 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (4.8ms)
+Completed 200 OK in 27ms (Views: 19.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/email/59" for 127.0.0.1 at 2020-05-29 03:19:37 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (7.8ms)
+Completed 200 OK in 26ms (Views: 18.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/email/58" for 127.0.0.1 at 2020-05-29 03:19:38 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (9.7ms)
+Completed 200 OK in 36ms (Views: 25.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/email/59" for 127.0.0.1 at 2020-05-29 03:19:39 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (4.7ms)
+Completed 200 OK in 25ms (Views: 18.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/email/60" for 127.0.0.1 at 2020-05-29 03:19:40 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (10.3ms)
+  Rendered email/show.js.erb (12.9ms)
+Completed 200 OK in 35ms (Views: 25.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/email/61" for 127.0.0.1 at 2020-05-29 03:19:41 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (5.5ms)
+Completed 200 OK in 23ms (Views: 15.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/email/65" for 127.0.0.1 at 2020-05-29 03:19:44 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (6.0ms)
+Completed 200 OK in 39ms (Views: 28.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 03:19:46 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.0ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (8.6ms)
+Completed 200 OK in 40ms (Views: 27.6ms | ActiveRecord: 5.0ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 03:19:47 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 01:19:47.708433"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 9.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/email/56" for 127.0.0.1 at 2020-05-29 03:19:49 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (6.9ms)
+Completed 200 OK in 30ms (Views: 17.1ms | ActiveRecord: 6.2ms)
+
+
+Started PUT "/email/56" for 127.0.0.1 at 2020-05-29 03:19:50 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 01:19:50.335937"], ["id", 56]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 13.5ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/email" for 127.0.0.1 at 2020-05-29 03:19:56 +0200
+Processing by EmailController#create as JS
+  Parameters: {"authenticity_token"=>"xy3znRPIQ9cgEbuMihxyIerHovh8PlAvdQ359URHpborG3OP05iNmUZ5t/F+TuCsJx4NKJcMRuDKJhtm/k1kaA=="}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:21
+  [1m[36mEmail Create (1.1ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Alex Trémité"], ["body", "Des p'tits croutons tout vieux genre pour les lapins ? Ouais j'savais pas c'que c'était, dans le doute j'les ai bouffés."], ["created_at", "2020-05-29 01:19:56.021906"], ["updated_at", "2020-05-29 01:19:56.021906"]]
+  ↳ app/controllers/email_controller.rb:21
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:21
+  Rendering email/create.js.erb
+  Rendered email/_email.html.erb (2.4ms)
+  Rendered email/create.js.erb (9.1ms)
+Completed 200 OK in 42ms (Views: 20.1ms | ActiveRecord: 8.8ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(34377518426153490)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(34377518426153490)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:25:06 +0200
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (2.0ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/index.html.erb within layouts/application (97.6ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 816ms (Views: 739.4ms | ActiveRecord: 23.8ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:25:10 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.5ms)
+  Rendered email/show.js.erb (4.0ms)
+Completed 200 OK in 29ms (Views: 11.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/email/56" for 127.0.0.1 at 2020-05-29 12:25:14 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (8.2ms)
+Completed 200 OK in 30ms (Views: 21.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:27:54 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.2ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (9.1ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (3.6ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (1.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (1.0ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (1.1ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (1.0ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/index.html.erb within layouts/application (89.1ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 209ms (Views: 203.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:27:56 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (4.4ms)
+Completed 200 OK in 28ms (Views: 18.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:27:59 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (4.6ms)
+Completed 200 OK in 23ms (Views: 15.8ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:01 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:28:01.207340"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 11.7ms | ActiveRecord: 8.6ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:03 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:03.494656"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 26ms (Views: 8.4ms | ActiveRecord: 5.3ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:06 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:28:06.516275"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 23ms (Views: 8.5ms | ActiveRecord: 4.5ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:07 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.2ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:07.648080"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 15.4ms | ActiveRecord: 7.7ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:08 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (3.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:28:08.368217"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 8.3ms | ActiveRecord: 6.7ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:09 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:09.077895"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 22ms (Views: 8.7ms | ActiveRecord: 3.5ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:10 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:28:10.610311"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 27ms (Views: 12.1ms | ActiveRecord: 3.4ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:12 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:12.764874"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 22ms (Views: 9.7ms | ActiveRecord: 2.9ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:13 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:28:13.976848"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 26.4ms | ActiveRecord: 5.3ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:28:14 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:14.689914"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 18.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/email/60" for 127.0.0.1 at 2020-05-29 12:28:16 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (3.1ms)
+  Rendered email/show.js.erb (5.6ms)
+Completed 200 OK in 36ms (Views: 17.3ms | ActiveRecord: 1.1ms)
+
+
+Started PUT "/email/60" for 127.0.0.1 at 2020-05-29 12:28:17 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:17.496819"], ["id", 60]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.8ms)
+Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/email/61" for 127.0.0.1 at 2020-05-29 12:28:18 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.3ms)
+  Rendered email/show.js.erb (4.9ms)
+Completed 200 OK in 31ms (Views: 16.5ms | ActiveRecord: 5.8ms)
+
+
+Started PUT "/email/61" for 127.0.0.1 at 2020-05-29 12:28:19 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:19.777457"], ["id", 61]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (20.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 72ms (Views: 25.1ms | ActiveRecord: 24.5ms)
+
+
+Started GET "/email/62" for 127.0.0.1 at 2020-05-29 12:28:21 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.9ms)
+  Rendered email/show.js.erb (13.8ms)
+Completed 200 OK in 38ms (Views: 29.6ms | ActiveRecord: 1.7ms)
+
+
+Started PUT "/email/62" for 127.0.0.1 at 2020-05-29 12:28:22 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:22.237244"], ["id", 62]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.4ms)
+Completed 200 OK in 33ms (Views: 16.4ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/email/63" for 127.0.0.1 at 2020-05-29 12:28:24 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"63"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.5ms)
+  Rendered email/show.js.erb (7.8ms)
+Completed 200 OK in 28ms (Views: 17.7ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/email/63" for 127.0.0.1 at 2020-05-29 12:28:25 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"63"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (6.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:28:25.990823"], ["id", 63]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 42ms (Views: 14.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:28:31 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.7ms)
+  Rendered email/show.js.erb (6.4ms)
+Completed 200 OK in 35ms (Views: 20.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:29:53 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (5.0ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (1.9ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.9ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (1.0ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/index.html.erb within layouts/application (77.9ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 231ms (Views: 223.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:29:55 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (8.0ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (5.7ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/index.html.erb within layouts/application (119.0ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_flash.html.erb (3.0ms)
+Completed 200 OK in 249ms (Views: 227.9ms | ActiveRecord: 8.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2020-05-29 12:30:00 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9yn4z21bYBT91cNPwNs5u4dokLzg158BmwmAfOkrQ+AbH3jdrQuuWpu9zzI0ias2SrE/bAvlic4kImLvUyGCMg=="}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 3020ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:30:03 +0200
+Processing by EmailController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2020-05-29 12:30:03 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.6ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 136ms (Views: 126.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2020-05-29 12:30:07 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1jmParjauop85PV/tg+hNda66WC8sTGNBd9gfe+Vv0wcLmJhNO0J548tzv9bVVWPEPPBq5ULQYgfopM11xOYGQ==", "user"=>{"email"=>"tonyboy888@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "tonyboy888@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 185ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:30:07 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.4ms)
+  Rendered email/_email.html.erb (19.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (1.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.8ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/index.html.erb within layouts/application (121.1ms)
+  Rendered layouts/_navbar.html.erb (2.4ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 217ms (Views: 210.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/email/58" for 127.0.0.1 at 2020-05-29 12:30:09 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (3.0ms)
+  Rendered email/show.js.erb (6.2ms)
+Completed 200 OK in 26ms (Views: 19.1ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:30:11 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:30:11.524906"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (2.1ms)
+Completed 200 OK in 23ms (Views: 9.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/email/58" for 127.0.0.1 at 2020-05-29 12:30:13 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (4.7ms)
+Completed 200 OK in 20ms (Views: 12.1ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:30:17 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:30:17.350911"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 22.3ms | ActiveRecord: 5.6ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:30:18 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:30:18.649665"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 35ms (Views: 18.7ms | ActiveRecord: 3.8ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:30:22 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:30:22.207219"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 41ms (Views: 9.3ms | ActiveRecord: 11.8ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:30:23 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:30:23.218028"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 26ms (Views: 11.4ms | ActiveRecord: 5.5ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:30:25 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:30:25.325313"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 24ms (Views: 8.6ms | ActiveRecord: 4.2ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:30:27 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:30:27.238808"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 32ms (Views: 17.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:34:25 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.8ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.8ms)
+  Rendered email/_email.html.erb (1.0ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/index.html.erb within layouts/application (59.8ms)
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 137ms (Views: 131.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:34:35 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.3ms)
+  Rendered email/show.js.erb (5.1ms)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:34:36 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:34:36.873630"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 11.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/email/55" for 127.0.0.1 at 2020-05-29 12:34:38 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (4.1ms)
+  Rendered email/show.js.erb (7.1ms)
+Completed 200 OK in 28ms (Views: 15.9ms | ActiveRecord: 1.8ms)
+
+
+Started PUT "/email/55" for 127.0.0.1 at 2020-05-29 12:34:39 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:34:39.389524"], ["id", 55]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 30ms (Views: 12.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/email/57" for 127.0.0.1 at 2020-05-29 12:34:41 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.5ms)
+  Rendered email/show.js.erb (7.1ms)
+Completed 200 OK in 26ms (Views: 17.6ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/email/57" for 127.0.0.1 at 2020-05-29 12:34:42 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:34:42.327473"], ["id", 57]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.4ms)
+Completed 200 OK in 29ms (Views: 10.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/email/59" for 127.0.0.1 at 2020-05-29 12:34:44 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.9ms)
+  Rendered email/show.js.erb (7.1ms)
+Completed 200 OK in 31ms (Views: 18.0ms | ActiveRecord: 2.9ms)
+
+
+Started PUT "/email/59" for 127.0.0.1 at 2020-05-29 12:34:45 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (3.3ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:34:45.737331"], ["id", 59]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 16.9ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:35:14 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (1.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/index.html.erb within layouts/application (60.4ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 135ms (Views: 129.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:35:21 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.2ms)
+  Rendered email/show.js.erb (4.9ms)
+Completed 200 OK in 17ms (Views: 11.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:35:24 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (2.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.1ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.9ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (1.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.8ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (1.6ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/index.html.erb within layouts/application (83.3ms)
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 163ms (Views: 155.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/email/56" for 127.0.0.1 at 2020-05-29 12:35:29 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.8ms)
+  Rendered email/show.js.erb (4.5ms)
+Completed 200 OK in 22ms (Views: 14.8ms | ActiveRecord: 0.6ms)
+
+
+Started PUT "/email/56" for 127.0.0.1 at 2020-05-29 12:35:30 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:35:30.533711"], ["id", 56]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 30ms (Views: 10.2ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/email/57" for 127.0.0.1 at 2020-05-29 12:35:33 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.6ms)
+  Rendered email/show.js.erb (9.4ms)
+Completed 200 OK in 30ms (Views: 19.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/email/58" for 127.0.0.1 at 2020-05-29 12:35:34 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.5ms)
+  Rendered email/show.js.erb (5.8ms)
+Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/email/59" for 127.0.0.1 at 2020-05-29 12:35:35 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.2ms)
+  Rendered email/show.js.erb (5.4ms)
+Completed 200 OK in 23ms (Views: 14.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/email/60" for 127.0.0.1 at 2020-05-29 12:35:36 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (5.4ms)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:36:56 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.7ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.1ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/index.html.erb within layouts/application (54.5ms)
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 137ms (Views: 131.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:36:59 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.0ms)
+  Rendered email/show.js.erb (4.8ms)
+Completed 200 OK in 20ms (Views: 13.2ms | ActiveRecord: 1.3ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:37:00 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:37:00.508357"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (2.8ms)
+Completed 200 OK in 42ms (Views: 19.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/email/73" for 127.0.0.1 at 2020-05-29 12:37:04 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.8ms)
+  Rendered email/show.js.erb (5.0ms)
+Completed 200 OK in 23ms (Views: 12.4ms | ActiveRecord: 2.7ms)
+
+
+Started PUT "/email/73" for 127.0.0.1 at 2020-05-29 12:37:08 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"73"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 73], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:37:08.948602"], ["id", 73]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 29ms (Views: 10.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/email/56" for 127.0.0.1 at 2020-05-29 12:37:12 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.5ms)
+  Rendered email/show.js.erb (6.0ms)
+Completed 200 OK in 26ms (Views: 15.9ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/email/56" for 127.0.0.1 at 2020-05-29 12:37:13 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (3.0ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:37:13.258576"], ["id", 56]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 17.3ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/email/69" for 127.0.0.1 at 2020-05-29 12:37:14 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"69"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (4.2ms)
+  Rendered email/show.js.erb (21.4ms)
+Completed 200 OK in 40ms (Views: 29.0ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/email" for 127.0.0.1 at 2020-05-29 12:37:17 +0200
+Processing by EmailController#create as JS
+  Parameters: {"authenticity_token"=>"KVXgZzHWSW4lKLRJJSNp4Ch2rVf4Co6ErJtdncac/BgNwpx59Yh06eWckds9WS1xbUX9qkBvgXkA2Fg/sUzVjg=="}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:21
+  [1m[36mEmail Create (2.4ms)[0m  [1m[32mINSERT INTO "emails" ("object", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["object", "Sam Lécasse"], ["body", "Et deux jus de pomme qui piquent !"], ["created_at", "2020-05-29 10:37:17.915529"], ["updated_at", "2020-05-29 10:37:17.915529"]]
+  ↳ app/controllers/email_controller.rb:21
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:21
+  Rendering email/create.js.erb
+  Rendered email/_email.html.erb (1.2ms)
+  Rendered email/create.js.erb (12.0ms)
+Completed 200 OK in 41ms (Views: 19.7ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/email/80" for 127.0.0.1 at 2020-05-29 12:37:20 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"80"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.5ms)
+  Rendered email/show.js.erb (11.9ms)
+Completed 200 OK in 31ms (Views: 20.0ms | ActiveRecord: 3.2ms)
+
+
+Started PUT "/email/80" for 127.0.0.1 at 2020-05-29 12:37:24 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"80"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:37:24.986684"], ["id", 80]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 11.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/email/55" for 127.0.0.1 at 2020-05-29 12:37:26 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.4ms)
+  Rendered email/show.js.erb (10.6ms)
+Completed 200 OK in 35ms (Views: 24.9ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:37:51 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (8.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.7ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/index.html.erb within layouts/application (52.7ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_flash.html.erb (0.9ms)
+Completed 200 OK in 136ms (Views: 123.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/email/65" for 127.0.0.1 at 2020-05-29 12:37:55 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.8ms)
+  Rendered email/show.js.erb (6.2ms)
+Completed 200 OK in 31ms (Views: 20.5ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/email/65" for 127.0.0.1 at 2020-05-29 12:37:57 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:37:57.308963"], ["id", 65]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (4.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 41ms (Views: 11.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:49:40 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.5ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (3.2ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.7ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (1.3ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (1.1ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (1.1ms)
+  Rendered email/_email.html.erb (0.7ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/index.html.erb within layouts/application (76.6ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 166ms (Views: 155.6ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:51:06 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.1ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.1ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.7ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (2.3ms)
+  Rendered email/_email.html.erb (18.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/index.html.erb within layouts/application (117.0ms)
+  Rendered layouts/_navbar.html.erb (2.9ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 207ms (Views: 200.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/email/55" for 127.0.0.1 at 2020-05-29 12:51:10 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (4.2ms)
+Completed 200 OK in 24ms (Views: 12.7ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/email/55" for 127.0.0.1 at 2020-05-29 12:51:11 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.0ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:51:12.014114"], ["id", 55]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 8.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/email/56" for 127.0.0.1 at 2020-05-29 12:51:13 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (3.5ms)
+  Rendered email/show.js.erb (8.2ms)
+Completed 200 OK in 28ms (Views: 15.9ms | ActiveRecord: 1.2ms)
+
+
+Started PUT "/email/56" for 127.0.0.1 at 2020-05-29 12:51:14 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:51:14.458453"], ["id", 56]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 33ms (Views: 9.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/email/65" for 127.0.0.1 at 2020-05-29 12:51:16 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (4.7ms)
+Completed 200 OK in 23ms (Views: 13.3ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/email/65" for 127.0.0.1 at 2020-05-29 12:51:17 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:51:17.616162"], ["id", 65]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.1ms)
+Completed 200 OK in 29ms (Views: 12.4ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:52:10 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.2ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.2ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.7ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.8ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/index.html.erb within layouts/application (63.4ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.6ms)
+Completed 200 OK in 152ms (Views: 146.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/email/58" for 127.0.0.1 at 2020-05-29 12:52:16 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (4.9ms)
+Completed 200 OK in 22ms (Views: 12.6ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:52:17 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:52:17.417453"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 25ms (Views: 8.5ms | ActiveRecord: 4.4ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:52:19 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:52:19.078085"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 28ms (Views: 10.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/email/62" for 127.0.0.1 at 2020-05-29 12:52:20 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (4.2ms)
+  Rendered email/show.js.erb (9.0ms)
+Completed 200 OK in 37ms (Views: 28.6ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/email/62" for 127.0.0.1 at 2020-05-29 12:52:21 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:52:21.190823"], ["id", 62]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 25.6ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:53:32 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.1ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.8ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (1.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.7ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (2.0ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/index.html.erb within layouts/application (75.6ms)
+  Rendered layouts/_navbar.html.erb (1.8ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 152ms (Views: 146.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/email/55" for 127.0.0.1 at 2020-05-29 12:53:35 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.5ms)
+  Rendered email/show.js.erb (4.0ms)
+Completed 200 OK in 21ms (Views: 13.4ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/email/55" for 127.0.0.1 at 2020-05-29 12:53:37 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:53:37.390000"], ["id", 55]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 33ms (Views: 10.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:53:39 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.5ms)
+  Rendered email/show.js.erb (4.8ms)
+Completed 200 OK in 20ms (Views: 12.6ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:53:39 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:53:39.996426"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 58ms (Views: 26.2ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/email/56" for 127.0.0.1 at 2020-05-29 12:53:41 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (4.6ms)
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/email/56" for 127.0.0.1 at 2020-05-29 12:53:42 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"56"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:53:42.203422"], ["id", 56]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.7ms)
+Completed 200 OK in 25ms (Views: 11.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:54:43 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (2.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.0ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.7ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/index.html.erb within layouts/application (78.7ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (0.8ms)
+Completed 200 OK in 179ms (Views: 169.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:55:03 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (25.7ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (3.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/index.html.erb within layouts/application (93.6ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 191ms (Views: 182.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:55:05 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.9ms)
+  Rendered email/show.js.erb (7.8ms)
+Completed 200 OK in 31ms (Views: 17.0ms | ActiveRecord: 2.7ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:55:06 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (7.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:55:06.983253"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 10.7ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/email/55" for 127.0.0.1 at 2020-05-29 12:55:08 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (3.9ms)
+  Rendered email/show.js.erb (8.5ms)
+Completed 200 OK in 28ms (Views: 16.3ms | ActiveRecord: 1.9ms)
+
+
+Started PUT "/email/55" for 127.0.0.1 at 2020-05-29 12:55:09 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"55"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:55:09.364872"], ["id", 55]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 36ms (Views: 11.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/email/57" for 127.0.0.1 at 2020-05-29 12:55:10 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.8ms)
+  Rendered email/show.js.erb (18.8ms)
+Completed 200 OK in 55ms (Views: 44.0ms | ActiveRecord: 4.3ms)
+
+
+Started PUT "/email/57" for 127.0.0.1 at 2020-05-29 12:55:11 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:55:11.253541"], ["id", 57]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 35ms (Views: 9.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/email/58" for 127.0.0.1 at 2020-05-29 12:55:12 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (4.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (6.2ms)
+Completed 200 OK in 51ms (Views: 26.1ms | ActiveRecord: 6.0ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 12:55:13 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.0ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:55:13.117193"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 8.7ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/email/59" for 127.0.0.1 at 2020-05-29 12:55:14 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.8ms)
+  Rendered email/show.js.erb (19.9ms)
+Completed 200 OK in 42ms (Views: 30.5ms | ActiveRecord: 0.7ms)
+
+
+Started PUT "/email/59" for 127.0.0.1 at 2020-05-29 12:55:14 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:55:14.904661"], ["id", 59]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 30ms (Views: 12.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/email/60" for 127.0.0.1 at 2020-05-29 12:55:15 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.0ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.9ms)
+  Rendered email/show.js.erb (12.5ms)
+Completed 200 OK in 36ms (Views: 26.3ms | ActiveRecord: 3.4ms)
+
+
+Started PUT "/email/60" for 127.0.0.1 at 2020-05-29 12:55:16 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:55:16.576553"], ["id", 60]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 27ms (Views: 10.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/email/62" for 127.0.0.1 at 2020-05-29 12:55:17 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.8ms)
+  Rendered email/show.js.erb (5.1ms)
+Completed 200 OK in 53ms (Views: 41.6ms | ActiveRecord: 4.9ms)
+
+
+Started PUT "/email/62" for 127.0.0.1 at 2020-05-29 12:55:18 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (2.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:55:18.660458"], ["id", 62]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.1ms)
+Completed 200 OK in 41ms (Views: 13.4ms | ActiveRecord: 8.3ms)
+
+
+Started PUT "/email/62" for 127.0.0.1 at 2020-05-29 12:55:22 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:55:22.564346"], ["id", 62]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 23ms (Views: 8.0ms | ActiveRecord: 4.0ms)
+
+
+Started PUT "/email/62" for 127.0.0.1 at 2020-05-29 12:56:09 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (3.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (2.8ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:56:09.508959"], ["id", 62]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (5.3ms)
+Completed 200 OK in 42ms (Views: 16.5ms | ActiveRecord: 11.3ms)
+
+
+Started PUT "/email/62" for 127.0.0.1 at 2020-05-29 12:56:53 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"62"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:56:53.987086"], ["id", 62]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 28ms (Views: 10.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:56:56 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.0ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (3.3ms)
+  Rendered email/show.js.erb (6.4ms)
+Completed 200 OK in 30ms (Views: 16.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 12:59:39 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.9ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.8ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/index.html.erb within layouts/application (60.4ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_flash.html.erb (2.5ms)
+Completed 200 OK in 157ms (Views: 150.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 12:59:42 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.0ms)
+  Rendered email/show.js.erb (4.9ms)
+Completed 200 OK in 29ms (Views: 16.5ms | ActiveRecord: 2.6ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:59:43 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:59:43.744939"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 35ms (Views: 13.2ms | ActiveRecord: 6.6ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:59:45 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.2ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:59:45.259229"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.0ms)
+Completed 200 OK in 34ms (Views: 14.9ms | ActiveRecord: 4.6ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:59:46 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (2.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:59:46.083426"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 25ms (Views: 8.7ms | ActiveRecord: 5.3ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 12:59:48 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:59:48.594449"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 24ms (Views: 8.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/email/60" for 127.0.0.1 at 2020-05-29 12:59:49 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (4.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.3ms)
+  Rendered email/show.js.erb (5.2ms)
+Completed 200 OK in 45ms (Views: 26.5ms | ActiveRecord: 9.2ms)
+
+
+Started DELETE "/email/60" for 127.0.0.1 at 2020-05-29 12:59:51 +0200
+Processing by EmailController#destroy as JS
+  Parameters: {"id"=>"60"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:45
+  [1m[36mEmail Destroy (0.5ms)[0m  [1m[31mDELETE FROM "emails" WHERE "emails"."id" = $1[0m  [["id", 60]]
+  ↳ app/controllers/email_controller.rb:45
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:45
+  Rendering email/destroy.js.erb
+  Rendered email/destroy.js.erb (7.1ms)
+Completed 200 OK in 31ms (Views: 15.0ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/email/59" for 127.0.0.1 at 2020-05-29 12:59:53 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.5ms)
+  Rendered email/show.js.erb (4.6ms)
+Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 1.5ms)
+
+
+Started PUT "/email/59" for 127.0.0.1 at 2020-05-29 12:59:54 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (3.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 10:59:54.421399"], ["id", 59]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 33ms (Views: 10.9ms | ActiveRecord: 6.8ms)
+
+
+Started PUT "/email/59" for 127.0.0.1 at 2020-05-29 12:59:55 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"59"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.0ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 10:59:55.788938"], ["id", 59]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 29ms (Views: 10.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/email/74" for 127.0.0.1 at 2020-05-29 13:00:00 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"74"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (5.1ms)
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 13:01:02 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (0.8ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (2.8ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.2ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/index.html.erb within layouts/application (70.9ms)
+  Rendered layouts/_navbar.html.erb (1.7ms)
+  Rendered layouts/_flash.html.erb (0.7ms)
+Completed 200 OK in 166ms (Views: 160.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/email/57" for 127.0.0.1 at 2020-05-29 13:01:06 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.6ms)
+  Rendered email/show.js.erb (4.5ms)
+Completed 200 OK in 21ms (Views: 12.4ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/email/57" for 127.0.0.1 at 2020-05-29 13:01:07 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 11:01:07.209935"], ["id", 57]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 61ms (Views: 40.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/email/58" for 127.0.0.1 at 2020-05-29 13:01:09 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (4.4ms)
+  Rendered email/show.js.erb (7.7ms)
+Completed 200 OK in 29ms (Views: 15.4ms | ActiveRecord: 3.1ms)
+
+
+Started PUT "/email/58" for 127.0.0.1 at 2020-05-29 13:01:10 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"58"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.6ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 11:01:10.343281"], ["id", 58]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.1ms)
+Completed 200 OK in 32ms (Views: 11.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/email/65" for 127.0.0.1 at 2020-05-29 13:01:12 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.5ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (4.4ms)
+Completed 200 OK in 36ms (Views: 13.9ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/email/65" for 127.0.0.1 at 2020-05-29 13:01:14 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"65"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 11:01:14.222187"], ["id", 65]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.9ms)
+Completed 200 OK in 36ms (Views: 13.8ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-05-29 13:01:31 +0200
+Processing by EmailController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  Rendering email/index.html.erb within layouts/application
+  [1m[36mEmail Load (16.0ms)[0m  [1m[34mSELECT "emails".* FROM "emails" ORDER BY "emails"."created_at" ASC[0m
+  ↳ app/views/email/index.html.erb:12
+  Rendered email/_email.html.erb (1.5ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (4.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.4ms)
+  Rendered email/_email.html.erb (0.6ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/_email.html.erb (0.3ms)
+  Rendered email/_email.html.erb (0.5ms)
+  Rendered email/index.html.erb within layouts/application (97.2ms)
+  Rendered layouts/_navbar.html.erb (1.5ms)
+  Rendered layouts/_flash.html.erb (2.8ms)
+Completed 200 OK in 220ms (Views: 198.6ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/email/54" for 127.0.0.1 at 2020-05-29 13:01:35 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.8ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.8ms)
+  Rendered email/show.js.erb (12.3ms)
+Completed 200 OK in 36ms (Views: 21.9ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/email/54" for 127.0.0.1 at 2020-05-29 13:01:36 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"54"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.1ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 11:01:36.292820"], ["id", 54]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (5.1ms)
+Completed 200 OK in 50ms (Views: 27.7ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/email/57" for 127.0.0.1 at 2020-05-29 13:01:38 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.7ms)
+  Rendered email/show.js.erb (9.7ms)
+Completed 200 OK in 53ms (Views: 26.5ms | ActiveRecord: 2.6ms)
+
+
+Started PUT "/email/57" for 127.0.0.1 at 2020-05-29 13:01:39 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"57"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.7ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.9ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 11:01:39.238445"], ["id", 57]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.1ms)
+Completed 200 OK in 48ms (Views: 15.1ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/email/61" for 127.0.0.1 at 2020-05-29 13:01:40 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (1.7ms)
+  Rendered email/show.js.erb (9.0ms)
+Completed 200 OK in 41ms (Views: 28.5ms | ActiveRecord: 5.7ms)
+
+
+Started PUT "/email/61" for 127.0.0.1 at 2020-05-29 13:01:41 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"61"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.3ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.7ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 11:01:41.099051"], ["id", 61]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 18.7ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/email/63" for 127.0.0.1 at 2020-05-29 13:01:42 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"63"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.1ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.6ms)
+  Rendered email/show.js.erb (34.7ms)
+Completed 200 OK in 62ms (Views: 51.4ms | ActiveRecord: 2.4ms)
+
+
+Started PUT "/email/63" for 127.0.0.1 at 2020-05-29 13:01:43 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"63"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (4.9ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (2.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", false], ["updated_at", "2020-05-29 11:01:44.013311"], ["id", 63]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (1.1ms)
+Completed 200 OK in 42ms (Views: 14.5ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/email/64" for 127.0.0.1 at 2020-05-29 13:01:45 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"64"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (1.6ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (2.1ms)
+  Rendered email/show.js.erb (7.1ms)
+Completed 200 OK in 28ms (Views: 16.0ms | ActiveRecord: 2.1ms)
+
+
+Started PUT "/email/64" for 127.0.0.1 at 2020-05-29 13:01:46 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"64"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (0.4ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (0.5ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 11:01:46.638216"], ["id", 64]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (2.5ms)
+Completed 200 OK in 37ms (Views: 11.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/email/71" for 127.0.0.1 at 2020-05-29 13:01:50 +0200
+Processing by EmailController#show as JS
+  Parameters: {"id"=>"71"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.2ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:9
+  Rendering email/show.js.erb
+  Rendered email/_show.html.erb (11.2ms)
+  Rendered email/show.js.erb (14.1ms)
+Completed 200 OK in 37ms (Views: 24.0ms | ActiveRecord: 4.7ms)
+
+
+Started PUT "/email/71" for 127.0.0.1 at 2020-05-29 13:01:52 +0200
+Processing by EmailController#update as JS
+  Parameters: {"id"=>"71"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/thiierryjeh/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mEmail Load (2.0ms)[0m  [1m[34mSELECT  "emails".* FROM "emails" WHERE "emails"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  ↳ app/controllers/email_controller.rb:35
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/email_controller.rb:36
+  [1m[36mEmail Update (1.4ms)[0m  [1m[33mUPDATE "emails" SET "read" = $1, "updated_at" = $2 WHERE "emails"."id" = $3[0m  [["read", true], ["updated_at", "2020-05-29 11:01:52.031828"], ["id", 71]]
+  ↳ app/controllers/email_controller.rb:36
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/email_controller.rb:36
+  Rendering email/update.js.erb
+  Rendered email/update.js.erb (2.9ms)
+Completed 200 OK in 46ms (Views: 21.9ms | ActiveRecord: 11.3ms)
+
+
