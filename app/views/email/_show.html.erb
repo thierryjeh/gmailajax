@@ -3,11 +3,11 @@
   <hr>
   <p><%= email.body %></p>
   <div class="mt-7 text-center">
-  <%= link_to "Delete", email_path(email.id), class:"btn btn-danger", data:{method: "DELETE"}, remote: true %>
+  <%= link_to "Delete", email_path(email.id), class:"btn btn-outline-dark", data:{method: "DELETE"}, remote: true %>
   <% if email.read %>
     <%= link_to "Mark as not read", email_path(email.id), id:"btn-read", class:"btn btn-outline-info", data:{method: "PUT"}, remote: true %>
   <% else %>
-    <%= link_to "Mark as read", email_path(email.id), id:"btn-read", class:"btn btn-outline-success", data:{method: "PUT"}, remote: true %>
+    <%= link_to "Mark as read", email_path(email.id), id:"btn-read", class:"btn btn-outline-info", data:{method: "PUT"}, remote: true %>
   <% end %>
   </div>
 </div>
